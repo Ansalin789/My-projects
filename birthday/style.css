@@ -1,0 +1,146 @@
+ @import url('https://fonts.googleapis.com/css2?family=Inspiration&display=swap');
+
+ @import url('https://fonts.googleapis.com/css2?family=Inspiration&family=Orbitron&display=swap');
+
+ @import url('https://fonts.googleapis.com/css2?family=Inspiration&family=Noto+Sans+Cherokee&family=Orbitron&display=swap');
+
+
+
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'poppins', sans-serif;
+ }
+
+ body {
+     width: 100vw;
+     height: 100vw;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .2)), url(pexels-jill-wellington-433527.jpg);
+     color: #fff;
+     background-size: cover;
+     background-position: center;
+ }
+
+ #countdown {
+     width: 250px;
+     height: 100px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin-top: 30px;
+     gap: 10px;
+     padding: 10px;
+ }
+
+ p {
+     font-size: 15px;
+     color: aqua;
+ }
+
+ .birthday {
+     font-family: 'Orbitron', sans-serif;
+     font-size: 50px;
+     font-weight: 800;
+     margin-top: 30px;
+     color: rgb(253, 3, 111);
+ }
+
+ .box {
+     width: 100px;
+     height: 50px;
+     text-align: center;
+     border-radius: 10px;
+     animation: move 5s ease-in-out infinite;
+     background: #9b253d;
+     border: 3px solid rgb(145, 1, 64);
+ }
+
+ .box h2 {
+     font-size: 15px;
+     font-family: 'Orbitron', sans-serif;
+ }
+
+ .box small {
+     font-size: 10px;
+ }
+
+ b {
+     color: yellow;
+ }
+
+ @keyframes move {
+     0% {
+         transform: translateX(0);
+     }
+
+     50% {
+         transform: translateX(100px);
+     }
+
+     100% {
+         transform: translateX(0);
+     }
+ }
+
+ @media(min-width:576PX) {
+
+     .birthday {
+         font-size: 100px;
+     }
+
+     p {
+         font-size: 25px;
+     }
+
+     #countdown {
+         width: 500px;
+         height: 100px;
+     }
+
+     .box {
+         width: 300px;
+         height: 80px;
+     }
+
+     .box h2 {
+         font-size: 40px;
+     }
+
+     .box small {
+         font-size: 15px;
+     }
+ }
+
+ @media(min-width:768PX) {
+     .birthday {
+         font-size: 150px;
+     }
+
+     p {
+         font-size: 35px;
+     }
+
+     #countdown {
+         width: 650px;
+         height: 150px;
+     }
+
+     .box {
+         width: 650px;
+         height: 120px;
+     }
+
+     .box h2 {
+         font-size: 60px;
+     }
+
+     .box small {
+         font-size: 20px;
+     }
+
+ }
