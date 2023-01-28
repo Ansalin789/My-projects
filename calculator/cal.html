@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #c3e1f8;
+            font-family: sans-serif;
+            outline: none;
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .calculator {
+            background-color: #d2e8f9;
+            padding: 15px;
+            border-radius: 30px;
+            box-shadow: inset 5px 5px 12px #ffffff,
+                5px 5px 12px rgba(0, 0, 0, .16);
+            display: grid;
+        }
+
+        .inner {
+            grid-column: span 4;
+            height: 70px;
+            width: 260px;
+            background-color: #d2e8f9;
+            box-shadow: inset -5px -5px 12px #eaf0f0,
+                5px 5px 12px rgba(131, 129, 129, 0.359);
+            border: none;
+            border-radius: 30px;
+            color: rgb(57, 23, 192);
+            font-size: 50px;
+            text-align: end;
+            margin: auto;
+            margin-top: 40px;
+            margin-bottom: 30px;
+            padding: 20px;
+        }
+
+        .button {
+            height: 48px;
+            width: 48px;
+            background-color: #d2e8f9;
+            box-shadow: -5px -5px 12px #ebefef,
+                5px 5px 12px rgba(28, 28, 28, 0.3);
+            border: none;
+            border-radius: 50%;
+            margin: 10px;
+            margin-right: 10px;
+            margin-left: 25px;
+            font-size: 16px;
+        }
+
+        #equal {
+            width: 130px;
+            border-radius: 40px;
+            background-color: #d2e8f9;
+            box-shadow: -5px -5px 12px #ebefef,
+                5px 5px 12px rgba(28, 28, 28, 0.36);
+        }
+
+        .boot {
+            justify-content: center;
+            align-items: right;
+            margin-left: 30px;
+            background-color: #d2e8f9;
+
+        }
+
+        h1 {
+            width: 100%;
+            text-align: center;
+            font-weight: bolder;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: rgb(207, 18, 144);
+            margin: 5px;
+            background-color: aquamarine;
+            letter-spacing: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CALCULATOR</h1>
+    <div class="container">
+        <form name="calc" class="calculator">
+            <input type="text" name="result" placeholder="0" id="output" class="inner">
+
+            <div class="boot">
+                <input type="button" value="CL" onclick="calc.result.value=' '" class="button">
+                <input type="button" value="DEL" onclick="calc.result.value=calc.result.value.slice(0,-1)"
+                    class="button">
+                <input type="button" value="%" onclick="calc.result.value=calc.result.value+ '%'" class="button">
+                <input type="button" value="/" onclick="calc.result.value=calc.result.value+ '/'" class="button">
+                <br><br>
+
+
+                <input type="button" value="7" onclick="calc.result.value=calc.result.value+7" class="button">
+                <input type="button" value="8" onclick="calc.result.value=calc.result.value+8" class="button">
+                <input type="button" value="9" onclick="calc.result.value=calc.result.value+9" class="button">
+                <input type="button" value="*" onclick="calc.result.value=calc.result.value+ '*'" class="button">
+                <br><br>
+
+
+                <input type="button" value="4" onclick="calc.result.value=calc.result.value+4" class="button">
+                <input type="button" value="5" onclick="calc.result.value=calc.result.value+5" class="button">
+                <input type="button" value="6" onclick="calc.result.value=calc.result.value+6" class="button">
+                <input type="button" value="-" onclick="calc.result.value=calc.result.value+ '-'" class="button">
+                <br><br>
+
+
+                <input type="button" value="1" onclick="calc.result.value=calc.result.value+1" class="button">
+                <input type="button" value="2" onclick="calc.result.value=calc.result.value+2" class="button">
+                <input type="button" value="3" onclick="calc.result.value=calc.result.value+3" class="button">
+                <input type="button" value="+" onclick="calc.result.value=calc.result.value+ '+'" class="button">
+                <br><br>
+
+
+                <input type="button" value="." onclick="calc.result.value=calc.result.value+ '.'" class="button">
+                <input type="button" value="0" onclick="calc.result.value=calc.result.value+0" class="button">
+                <input id="equal" type="button" value="=" onclick="calc.result.value=eval(calc.result.value)"
+                    class="button">
+            </div>
+
+
+
+        </form>
+    </div>
+
+
+
+</body>
+
+</html>
